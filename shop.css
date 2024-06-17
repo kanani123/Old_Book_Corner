@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root{
+    --blue: #088F8F;
+    --dark-blue: #066262;
+    --black: #444;
+    --light-color: #666;
+    /* --border: .1rem solid rgba(0,0,0,.1); */
+    --border: .1rem solid #088F8F;
+    --border-hover: .1rem solid var(--black);
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    transition: width none;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--black);
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    border-radius: .5rem;
+    color: #fff;
+    background: var(--blue);
+    font-size: 1.7rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn:hover{
+    background: var(--dark-blue);
+}
+
+.header .header-1{
+    background-color: #fff;
+    padding: 1.5rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .header-1 .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--black);
+}
+
+.header .header-1 .logo i{
+    color: var(--blue);
+}
+
+.header .header-1 .search-form{
+    width: 50rem;
+    height: 5rem;
+    border: var(--border);
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: .5rem;
+}
+
+.header .header-1 .search-form .box{
+    width: 100%;
+    border: var(--border);
+    border-radius: .5rem;
+    padding: 2rem;
+}
+
+.header .header-1 .search-form button{
+    font-size: 2.5rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.header .header-1 .search-form button:hover{
+    color: var(--blue);
+}
+
+.header .header-1 .icons div,
+.header .header-1 .icons a{
+    font-size: 2.5rem;
+    margin-left: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.header .header-1 .icons div:hover,
+.header .header-1 .icons a:hover{
+    color: var(--blue);
+}
+
+
+
+#search-btn{
+    display: none;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30rem);
+    justify-content: center;
+    gap:3rem;
+    max-width: 1200px;
+    margin:0 auto;
+    align-items: flex-start;
+    /* border: 1px solid black; */
+    /* border-radius: 1rem; */
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+.container .profile{
+    text-align: center;
+    padding:2rem;
+    border-radius: .5rem;
+    border:1px solid #088F8F;
+    box-shadow: var(--box-shadow);
+    background-color: white;
+}
+
+.container img{
+    height: 17rem;
+    width: 17rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: .7rem solid white;
+}
+
+.container p{
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+p{
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(29, 27, 27);
+    margin-top: 23rem;
+}
+
+.home{
+    min-height: 70vh;
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url('/image/blog-1.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home .content{
+    text-align: center;
+    width: 60rem;
+}
+
+.home .content h3{
+    font-size: 5rem;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.profile .box-container{
+    /* border: 1px solid black; */
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30rem);
+    align-items: flex-start;
+    gap: 3rem;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .header .header-1{
+        padding: 2rem;
+    }
+
+}
+@media (max-width:768px){
+
+    html{
+        scroll-padding-top: 0;
+    }
+
+    body{
+        padding-bottom: 6rem;
+    }
+
+    .header-2{
+        display: none;
+    }
+
+    .bottom-navbar{
+        display: block;
+    }
+
+    #search-btn{
+        display: inline-block;
+    }
+
+    .header .header-1{
+        box-shadow: var(--box-shadow);
+        position: relative;
+    }
+
+    .header .header-1 .search-form{
+        position: absolute;
+        top: -115%; right: 2rem;
+        width: 90%;
+        box-shadow: var(--box-shadow);
+    }
+
+    .header .header-1 .search-form.active{
+        top: 115%;
+    }
+
+
+}
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+}

@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root{
+    --blue: #088F8F;
+    --dark-blue: #066262;
+    --black: #444;
+    --light-color: #666;
+    /* --border: .1rem solid rgba(0,0,0,.1); */
+    --border: .1rem solid #088F8F;
+    --border-hover: .1rem solid var(--black);
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    /* text-transform: capitalize; */
+    transition: all .2s linear;
+    transition: width none;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--black);
+}
+
+body{
+    background: rgb(237, 237, 237);
+    overflow-x: hidden;
+    padding-left: 35rem;
+}
+
+section{
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.btn{
+    padding: .7rem 3rem;
+    background: var(--blue);
+    color: #fff;
+    cursor: pointer;margin-top: 1rem;
+    font-size: 2rem;
+    border-radius: 0.7rem;
+}
+
+.btn:hover{
+    background: var(--dark-blue);
+}
+
+.delete-btn{
+   display: inline-block;
+   margin-top: 1rem;
+   padding:1rem 3rem;
+   cursor: pointer;
+   color:white;
+   font-size: 1.8rem;
+   border-radius: .5rem;
+   text-transform: capitalize;
+   background-color: rgb(242, 46, 46);
+   width: 100%;
+}
+
+.delete-btn:hover{
+    background-color: rgb(205, 6, 6);
+}
+
+
+.empty{
+    padding:1.5rem;
+    text-align: center;
+    border:1px solid black;
+    background-color: white;
+    color:red;
+    font-size: 2rem;
+ }
+
+header{
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 35rem;
+    background: var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+
+header .user img{
+    height: 17rem;
+    width: 17rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: .7rem solid white;
+}
+
+header .user .name{
+    font-size: 3rem;
+    color: #fff;
+}
+
+header .navbar{
+    width: 100%;
+}
+
+header .navbar ul{
+    list-style: none;
+    padding: 1rem 3rem;
+}
+
+header .navbar ul li a{
+    display: block;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    background: var(--dark-blue);
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+
+header .navbar ul li a:hover{
+    background: #013838;
+}
+
+#menu{
+    position: fixed;
+    top: 2rem; right: 2rem;
+    background: var(--blue);
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding: 1rem 1.5rem;
+    z-index: 1000;
+    display: none;
+}
+
+.profile h1{
+    text-align: center;
+    margin:0 6rem;
+    font-size: 4rem;
+    padding: 1rem;
+    border-bottom: .1rem solid black;
+    color: black;   
+}
+
+.profile .box{
+    border: .1px solid black;
+    background-color:  rgb(235, 231, 231);
+    font-size: 3.5rem;
+    margin-top: 5rem;
+    margin-left: 18rem;
+    padding: 3rem;
+    color: black;
+    padding-left: 3rem;
+    border-radius: 1rem;
+    max-width: 70rem;
+}
+
+.edit-profile-form{
+    min-height: 100vh;
+    background-color: rgba(0,0,0,.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:2rem;
+    overflow-y: scroll;
+    position: fixed;
+    top:0; left:0; 
+    z-index: 1200;
+    width: 100%;
+ }
+ 
+ .edit-profile-form form{
+    width: 50rem;
+    padding:2rem;
+    text-align: center;
+    border-radius: .5rem;
+    background-color: white;
+ }
+ 
+ .edit-profile-form form img{
+    height: 25rem;
+    margin-bottom: 1rem;
+ }
+ 
+ .edit-profile-form form .box{
+    margin:1rem 0;
+    padding:1.2rem 1.4rem;
+    border:1px solid black;
+    border-radius: .5rem;
+    background-color: white;
+    font-size: 1.8rem;
+    color:black;
+    width: 100%;
+ }
+
+ .add-books form{
+    background-color: rgb(235, 231, 231);
+    border-radius: .5rem;
+    margin-top: 5rem;
+    margin-left: 28rem;
+    padding:2rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    border:1px solid black;
+    max-width: 50rem;  
+ }
+
+ .add-books h1{
+    text-align: center;
+    margin:0 6rem;
+    font-size: 4rem;
+    padding: 1rem;
+    border-bottom: .1rem solid black;
+    color: black;   
+}
+
+
+ .add-books form h3{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color:var(--black);
+    margin-bottom: 1.5rem;
+ }
+ 
+ .add-books form .box{
+    width: 100%;
+    background-color: white;
+    border-radius: .5rem;
+    margin:1rem 0;
+    padding:1.2rem 1.4rem;
+    color:black;
+    font-size: 1.8rem;
+    border:1px solid black;
+ }
+
+ .show-books{
+    padding-top: 0;
+ }
+
+ .show-books h1{
+    text-align: center;
+    margin:0 6rem;
+    font-size: 4rem;
+    padding: 1rem;
+    border-bottom: .1rem solid black;
+    color: black;   
+}
+ 
+ .show-books .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30rem);
+    justify-content: center;
+    gap:1.5rem;
+    max-width: 1200px;
+    margin:0 auto;
+    align-items: flex-start;
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-top: 5rem;
+ }
+ 
+ .show-books .box-container .box{
+    text-align: center;
+    padding:2rem;
+    border-radius: .5rem;
+    border:1px solid black;
+    box-shadow: var(--box-shadow);
+    background-color: white;
+ }
+ 
+ .show-books .box-container .box img{
+    height: 20rem;
+ }
+ 
+ .show-books .box-container .box .name{
+    padding:1rem 0;
+    font-size: 2rem;
+    color:black;
+ }
+ 
+ .show-books .box-container .box .price{
+    padding:1rem 0;
+    font-size: 2.5rem;
+    color:black;
+ }
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+
+@media (max-width:1200px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .profile{
+        padding: 1rem 4rem;
+    }
+
+    .profile .box{
+        margin: auto;
+        margin-top: 5rem;
+    }
+
+    .add-books form{
+        margin: auto;
+        margin-top: 5rem;
+    }
+
+}
+
+@media (max-width:991px){
+
+   header{
+    left: -120%;
+   }
+
+   #menu{
+    display: block;
+   }
+
+   header.toggle{
+    left: 0%;
+   }
+
+   body{
+    padding: 0;
+   }
+
+}
+
+@media (max-width:768px){
+
+    html{
+        font-size: 50%;
+    }
+
+ }
+
+@media (max-width:400px){
+
+    header{
+     width: 100vw;
+    }
+
+    .profile .box{
+        font-size: 3rem;
+    }
+
+}
